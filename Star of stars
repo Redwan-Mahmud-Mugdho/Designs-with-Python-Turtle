@@ -1,0 +1,23 @@
+import turtle
+
+#setup
+r = turtle.Turtle()
+r.speed(10)
+r.shape("triangle")
+
+#position setup
+r.penup()
+r.goto(-200,100)
+r.pendown()
+
+#main function
+def star(a):
+  if a <=10 :
+    return
+  else:
+    for i in range(5): 
+      r.forward(a)
+      star(a/3)
+      r.left(216)
+
+star(360)
